@@ -85,19 +85,20 @@ The veth cable is a virtual Ethernet cable that connects two namespaces. We'll c
      
        - In red namespace :
          
-             ```bash
+             ``` bash
                ip route add 192.168.1.2 dev rveth
-               ip route
-         
+               ip route   
              ```
          
         - In green namespace :
+          
              ``` bash
                ip route add 192.168.1.1 dev gveth
                ip route
              ```
              
         - ping
+          
             ``` bash
               sudo ip netns exec red ping 192.168.1.2
               sudo ip netns exec green ping 192.168.1.1
