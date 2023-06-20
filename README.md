@@ -1,6 +1,9 @@
-# Creating Namespaces & veth Cable & establish communication through veth
+# Creating Network Namespaces,veth Cable & establish communication through veth
 
-This documentation provides a step-by-step guide on how to create two namespaces and connect them using a veth (Virtual Ethernet) cable. We'll also demonstrate how to ping from one namespace to another. This setup can be useful for network testing, container networking, or simulating network environments. Let's get started!
+A network namespace is a logical copy of the network stack from the host system. This means that each namespace has its own IP addresses, network interfaces, routing tables, and so forth. Network namespaces are useful for setting up containers or virtual environments.
+
+This documentation provides a step-by-step guide on how to create two network namespaces and connect them using a veth (Virtual Ethernet) cable. We'll also demonstrate how to ping from one namespace to another. This setup can be useful for network testing, container networking, or simulating network environments. Let's get started!
+
 
 ## Prerequisites
 
