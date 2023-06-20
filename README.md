@@ -82,16 +82,20 @@ The veth cable is a virtual Ethernet cable that connects two namespaces. We'll c
  ## Step 3: Communicate within the namespaces
 
    - Add route table to assign ip into corresponding interface.  It is used by the kernel to determine how to forward network packets to their destination.
+     
        - In red namespace :
+         
              ``` bash
                ip route add 192.168.1.2 dev rveth
                ip route
              ```
+         
         - In green namespace :
              ``` bash
                ip route add 192.168.1.1 dev gveth
                ip route
              ```
+             
         - ping
             ``` bash
               sudo ip netns exec red ping 192.168.1.2
