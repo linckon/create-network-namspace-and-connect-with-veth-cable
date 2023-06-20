@@ -82,9 +82,9 @@ The veth cable is a virtual Ethernet cable that connects two namespaces. We'll c
 ![assign-ip-address](https://github.com/linckon/create-network-namspace-and-connect-with-veth-cable/assets/12873582/69c5aaa2-827d-4458-b3b8-49fc17965018)
 
 
- ## Step 3: Communicate within the namespaces
+ ## Step 3: Establish a connection between the namespaces
 
-   - Add route table to assign ip into corresponding interface.  It is used by the kernel to determine how to forward network packets to their destination.
+   - Add route table to assign ip into the corresponding interface.  The kernel uses it to determine how to forward network packets to their destination.
      
        - In red namespace :
             ``` bash
