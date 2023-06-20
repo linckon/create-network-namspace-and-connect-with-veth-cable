@@ -1,4 +1,4 @@
-# Creating Namespaces and Connecting with veth Cable
+# Creating Namespaces & veth Cable & establish communication through veth
 
 This documentation provides a step-by-step guide on how to create two namespaces and connect them using a veth (Virtual Ethernet) cable. We'll also demonstrate how to ping from one namespace to another. This setup can be useful for network testing, container networking, or simulating network environments. Let's get started!
 
