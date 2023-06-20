@@ -85,9 +85,10 @@ The veth cable is a virtual Ethernet cable that connects two namespaces. We'll c
      
        - In red namespace :
          
-             ``` bash
+             ```bash
                ip route add 192.168.1.2 dev rveth
                ip route
+         
              ```
          
         - In green namespace :
