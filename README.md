@@ -74,7 +74,7 @@ The veth cable is a virtual Ethernet cable that connects two namespaces. We'll c
       ip link set dev rveth up
      ```
 
-  - In red, assign an IP address to gveth:
+  - In green, assign an IP address to gveth:
        ``` bash
         ip addr add 192.168.1.2 dev gveth
        ```
