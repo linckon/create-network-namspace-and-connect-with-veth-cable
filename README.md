@@ -28,6 +28,10 @@ Namespaces allow us to create isolated network environments. In this example, we
       ``` bash
         sudo ip netns
       ```
+      
+![ns-list](https://github.com/linckon/create-network-namspace-and-connect-with-veth-cable/assets/12873582/b03f967c-0701-492e-976e-c0e972300afb)
+
+
 
 ## Step 2: Connect Namespaces using veth Cable
 
@@ -37,11 +41,16 @@ The veth cable is a virtual Ethernet cable that connects two namespaces. We'll c
     ``` bash
       sudo ip link add rveth type veth peer name gveth
     ```
+  ![create-veth-cable](https://github.com/linckon/create-network-namspace-and-connect-with-veth-cable/assets/12873582/ad9e4ba0-9297-4adf-a35b-444640fd9e8d)
+  
  - Connect gveth to green and rveth to red:
      ``` bash
       sudo ip link set rveth netns red
       sudo ip link set gveth netns green
      ```
+
+     ![connect-ns-to-veth](https://github.com/linckon/create-network-namspace-and-connect-with-veth-cable/assets/12873582/d98ec89f-2d43-4690-8450-f602105f2075)
+
 
   - Bring up the loopback & virthual ethernet interface within the red namespace:
      ``` bash
@@ -66,6 +75,9 @@ The veth cable is a virtual Ethernet cable that connects two namespaces. We'll c
        ``` bash
         ip addr add 192.168.1.2 dev gveth
        ```
+
+![assign-ip-address](https://github.com/linckon/create-network-namspace-and-connect-with-veth-cable/assets/12873582/69c5aaa2-827d-4458-b3b8-49fc17965018)
+
 
  ## Step 3: Communicate within the namespaces
 
